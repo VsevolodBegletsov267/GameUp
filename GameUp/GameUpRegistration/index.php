@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             }
         }
-        header("Location: http://localhost/GameUp/GameUpShowcase/index%20(1).php");
+        header("Location: http://localhost/GameUp/showcase/index%201.php");
         $user = new User(0, $name, $email, $password);
         $userController->addUser($user);
     }
