@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
 
         if ($user['password'] == $password) {
-            header("Location: http://localhost/GameUp/GameUpShowcase/index1%20.php");
+            header("Location: http://localhost/GameUp/showcase/index1%20.php");
         } else {
             echo '<center><h1>Неверный пользователь или пароль!</h1></center>';
         }
