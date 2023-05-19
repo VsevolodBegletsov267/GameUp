@@ -3,6 +3,7 @@
 require_once 'model/User.php';
 require_once 'model/UserList.php';
 require_once 'view/UserView.php';
+
 class UserController
 {
     private UserList $userList;
