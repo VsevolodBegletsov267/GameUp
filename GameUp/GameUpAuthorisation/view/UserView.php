@@ -54,7 +54,7 @@ class UserView
         <body>
         <div id="reg">
             <center>
-                <form action="" method="POST">
+                <form method="POST">
                     Авторизация<br><br>
                     Email:<br><input type="email" name="email"><br>
                     Пароль:<br><input type="password" name="password"><br>
