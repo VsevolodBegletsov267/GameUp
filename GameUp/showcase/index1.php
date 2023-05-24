@@ -12,9 +12,10 @@
     GameUp!
     <button><img src="user.png" alt="аккаунт" id="icon"></button>
     <button><img src="basket.png" alt="корзина" id="icon"></button>
-
+    <div id="slogan">Лучшее для лучших!</div>
 </div>
-<div id="content"><div id="special">Специальные предложения!</div>
+<div id="content">
+    <div id="special">Специальные предложения!</div>
     <table id="tr1">
         <tr>
             <td id="sales">Блок</td>
