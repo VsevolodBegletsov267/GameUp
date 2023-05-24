@@ -16,6 +16,9 @@ body {
     padding-left: 30px;
     vertical-align: text-top;
 }
+#slogan{
+
+}
 #content{
     text-align: center;
     display: block;
@@ -31,6 +34,7 @@ td{
     border-width: 2px;
     border-color: black;
     border-radius: 30px;
+    background-color: white;
 }
 #sales{
     width: 290px;
@@ -63,6 +67,10 @@ button{
 }
 #icon{
     height: 35px;
-
+}
+#goodimg{
+    height: 100%;
+    border-radius: 30px;
+    margin-top: 10px;
 }
 
