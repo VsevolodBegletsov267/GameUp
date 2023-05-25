@@ -27,6 +27,7 @@ body {
     text-align: center;
     display: block;
     font-family: "Arial Black";
+    margin-top: 150px;
 }
 table{
     border-spacing: 50px 20px;
@@ -77,14 +78,18 @@ button{
     border-radius: 30px;
     margin-top: 10px;
 }
+#conteiner{
+    display: flex;
+  align-items: center;
+}
 #imageproduct{
-width: 30%;
-margin-right: 1000px;
+width: 25%;
+margin-right: 1200px;
 }
 #item{
 margin-left: 200px;
 scale: 2;
-margin-top: 00px;
+margin-top: -550px;
 }
 #description{
 margin-left: -50px;
