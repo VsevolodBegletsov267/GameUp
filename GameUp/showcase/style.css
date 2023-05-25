@@ -92,7 +92,7 @@ scale: 2;
 margin-top: -550px;
 }
 #description{
-margin-left: -50px;
+margin-left: 890px;
 scale: 1.5;
 }
 #text{
@@ -103,4 +103,19 @@ scale: 1.5;
    margin-left: 10px;
 scale: 1.5;
 margin-top: 10px; 
+}
+.buy-button {
+  background-color: darkred;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 00px;
+  margin-right: 1100px;
+}
+
+.buy-button:hover {
+  background-color: #e60000;
 }
