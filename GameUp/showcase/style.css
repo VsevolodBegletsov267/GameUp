@@ -22,12 +22,11 @@ body {
     text-align: center;
 
 }
-
 #content{
     text-align: center;
     display: block;
     font-family: "Arial Black";
-    margin-top: 150px;
+    margin-top: 100px;
 }
 table{
     border-spacing: 50px 20px;
@@ -40,6 +39,7 @@ td{
     border-color: black;
     border-radius: 30px;
     background-color: white;
+
 }
 #sales{
     width: 290px;
@@ -64,19 +64,30 @@ td{
     font-size: 35px;
     margin-top: 10px;
 }
-button{
+#headbut{
     border-radius: 20%;
     float: right;
     margin-right: 25px;
     margin-top: 30px;
 }
+#goodbut{
+    border: 0px;
+    border-radius: 30px;
+    background-color: white;
+
+}
 #icon{
     height: 35px;
 }
+
 #goodimg{
+
     height: 100%;
     border-radius: 30px;
     margin-top: 10px;
+}
+a{
+    color: black;
 }
 #conteiner{
     display: flex;
@@ -118,44 +129,4 @@ margin-top: 10px;
 
 .buy-button:hover {
   background-color: #e60000;
-}
-#cart {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-#cart h3 {
-  margin-top: 0;
-}
-
-#cart-items {
-  list-style: none;
-  padding: 0;
-}
-
-#cart-items li {
-  margin-bottom: 5px;
-}
-
-#cart-items li button {
-  margin-left: 10px;
-}
-
-#products {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-#products h3 {
-  margin-top: 0;
-}
-
-#products ul {
-  list-style: none;
-  padding: 0;
-}
-
-#products ul li {
-  cursor: pointer;
 }

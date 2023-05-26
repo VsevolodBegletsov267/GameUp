@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
@@ -10,8 +10,8 @@
 <div id="header">
     <image id="logo" src="logo.jpg"></image>
     GameUp!
-    <button><img src="user.png" alt="аккаунт" id="icon"></button>
-    <button><img src="basket.png" alt="корзина" id="icon"></button>
+    <button id="headbut"><img src="user.png" alt="аккаунт" id="icon"></button>
+    <button id="headbut"><img src="basket.png" alt="корзина" id="icon"></button>
     <div id="slogan">Лучшее для лучших!</div>
 </div>
 <div id="content">
@@ -27,21 +27,31 @@
     <table>
         <tr>
             <td>
-                <img id="goodimg" src="Goodimage/Razer%20Basilisk%20V3.jpg">
-                <?php echo $name="Razer Basilisk V3"."<br>";
-                echo $price=5100 . ' руб.';
-                ?>
-
+                <form  action="../items/Mid_1.html">
+                    <button id="goodbut">
+                        <img id="goodimg" src="Goodimage/Razer%20Basilisk%20V3.jpg">
+                    </button>
+                       <a href="../items/Mid_1.html"> <?php echo $name="Razer Basilisk V3"."<br>";
+                        echo $price=5100 . ' руб.';
+                        ?></a>
+                </form>
+            <td>
+                <form  action="../items/Mid_2.html">
+                    <button id="goodbut">
+                        <img id="goodimg" src="Goodimage/HyperX%20Pulsefire%20Surge.jpg">
+                    </button>
+                       <a href="../items/Mid_2.html"><?php echo $name="HyperX Pulsefire Surge"."<br>";
+                        echo $price=2969 . ' руб.';?></a>
+                </form>
             </td>
             <td>
-                <img id="goodimg" src="Goodimage/HyperX%20Pulsefire%20Surge.jpg">
-                <?php echo $name="HyperX Pulsefire Surge"."<br>";
-                echo $price=2969 . ' руб.';?>
-            </td>
-            <td>
-                <img id="goodimg" src="Goodimage/SteelSeries.jpg">
-                <?php echo $name="SteelSeries Rival 5"."<br>";
-                echo $price=4380 . ' руб.';?>
+                <form  action="../items/Mid_3.html">
+                    <button id="goodbut">
+                        <img id="goodimg" src="Goodimage/SteelSeries.jpg">
+                    </button>
+                        <a href="../items/Mid_3.html"><?php echo $name="SteelSeries Rival 5"."<br>";
+                            echo $price=4380 . ' руб.';?></a>
+                </form>
             </td>
             <td>
                 <img id="goodimg" src="Goodimage/Razer%20Ornata%20V2.jpg">
@@ -61,7 +71,7 @@
         </tr>
         <tr>
             <td>
-                <img id="goodimg" src="Goodimage/HyperX%20Cloud%20Alpha%20S.jpg">
+                <img id="goodimg" src="Goodimage/HyperX%20Cloud%20Alpha%20S.jpg"><br>
                 <?php echo $name="HyperX Cloud Alpha S"."<br>";
                 echo $price=8079 . ' руб.';?>
             </td>
@@ -98,12 +108,12 @@
                 echo $price=12889 . ' руб.';?>
             </td>
             <td>
-                <img id="goodimg" src="Goodimage/Sony Dual Sense.jpg">
+                <img id="goodimg" src="Goodimage/Sony Dual Sense.jpg"><br>
                 <?php echo $name="Sony Dual Sense"."<br>";
                 echo $price=5900 . ' руб.';?>
             </td>
             <td>
-                <img id="goodimg" src="Goodimage/Sony DualShock 4 v2.jpg">
+                <img id="goodimg" src="Goodimage/Sony DualShock 4 v2.jpg"><br>
                 <?php echo $name="Sony DualShock 4 v2"."<br>";
                 echo $price=4990 . ' руб.';?>
             </td>
