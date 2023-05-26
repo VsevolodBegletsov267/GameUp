@@ -119,3 +119,43 @@ margin-top: 10px;
 .buy-button:hover {
   background-color: #e60000;
 }
+#cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#cart h3 {
+  margin-top: 0;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-bottom: 5px;
+}
+
+#cart-items li button {
+  margin-left: 10px;
+}
+
+#products {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#products h3 {
+  margin-top: 0;
+}
+
+#products ul {
+  list-style: none;
+  padding: 0;
+}
+
+#products ul li {
+  cursor: pointer;
+}

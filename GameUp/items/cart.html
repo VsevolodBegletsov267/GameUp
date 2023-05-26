@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>GameUp!</title>
+    <link rel="stylesheet" type="text/css" href="../showcase/style.css">
+</head>
+<body>
+<div id="header">
+    <image id="logo" src="../showcase/logo.jpg"></image>
+    GameUp!
+    <button><img src="../showcase/user.png" alt="аккаунт" id="icon"></button>
+    <button><img src="../showcase/basket.png" alt="корзина" id="icon"></button>
+    <div id="slogan">Лучшее для лучших!</div>
+</div>
+
+
+    <div id="cart">
+  <h3>Корзина</h3>
+  <ul id="cart-items"></ul>
+  <p>Общая стоимость: <span id="total-price">0</span> руб.</p>
+  <button id="clear-cart">Очистить корзину</button>
+</div>
+
+<div id="products">
+  <h3>Товары</h3>
+  <ul>
+    <li data-id="1" data-name="Товар 1" data-price="100">Товар 1 - 100 руб.</li>
+    <li data-id="2" data-name="Товар 2" data-price="200">Товар 2 - 200 руб.</li>
+    <li data-id="3" data-name="Товар 3" data-price="300">Товар 3 - 300 руб.</li>
+  </ul>
+</div>
+<script>
+    // Получаем элементы DOM
+const cartItems = document.getElementById("cart-items");
+const total = document.getElementById("total-price");
+const clearCartBtn = document.getElementById("clear-cart");
+
+// Обработчик клика по кнопке "Добавить в корзину"
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target.tagName === "LI") {
+    const id = target.getAttribute("data-id");
+    const name = target.getAttribute("data-name");
+    const price = target.getAttribute("data-price");
+
+    // Добавляем товар в корзину
+    const li = document.createElement("li");
+    li.innerHTML = `${name} - ${price} руб. <button class="remove-item" data-id="${id}">Удалить</button>`;
+    cartItems.appendChild(li);
+
+    // Обновляем общую стоимость
+    const totalPrice = parseInt(total.innerHTML) + parseInt(price);
+    total.innerHTML = totalPrice;
+  }
+});
+
+// Обработчик клика по кнопке "Удалить"
+cartItems.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target.className === "remove-item") {
+    const id = target.getAttribute("data-id");
+
+    // Удаляем товар из корзины
+    const li = target.parentNode;
+    cartItems.removeChild(li);
+
+    // Обновляем общую стоимость
+    const price = parseInt(li.getAttribute("data-price"));
+    const totalPrice = parseInt(total.innerHTML) - price;
+    total.innerHTML = totalPrice;
+  }
+});
+
+// Обработчик клика по кнопке "Очистить корзину"
+clearCartBtn.addEventListener("click", () => {
+  cartItems.innerHTML = "";
+  total.innerHTML = "0";
+});
+</script>
+
+     
+</body>
+</html>
