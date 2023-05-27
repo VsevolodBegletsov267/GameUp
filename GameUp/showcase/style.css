@@ -29,7 +29,7 @@ body {
     margin-top: 100px;
 }
 table{
-    border-spacing: 50px 20px;
+    border-spacing: 27px 20px;
 }
 td{
     width: 200px;
@@ -74,20 +74,19 @@ td{
     border: 0px;
     border-radius: 30px;
     background-color: white;
-
 }
 #icon{
     height: 35px;
 }
 
 #goodimg{
-
-    height: 100%;
     border-radius: 30px;
     margin-top: 10px;
+    height: 100%;
 }
 a{
     color: black;
+    text-decoration: none;
 }
 #conteiner{
     display: flex;
