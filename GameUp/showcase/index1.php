@@ -1,3 +1,8 @@
+<?php
+session_start();
+$mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
+$mysql->query("CREATE TABLE IF NOT EXISTS `products`(`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `price` INT(16) NOT NULL , PRIMARY KEY (`id`))")
+?>
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
