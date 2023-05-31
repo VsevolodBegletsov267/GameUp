@@ -1,7 +1,7 @@
 <?php
-session_start();
-$mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
-$mysql->query("CREATE TABLE IF NOT EXISTS `products`(`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `price` INT(16) NOT NULL , PRIMARY KEY (`id`))")
+//session_start();
+//$mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
+//$mysql->query("CREATE TABLE IF NOT EXISTS `products`(`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `price` INT(16) NOT NULL , PRIMARY KEY (`id`))")
 ?>
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
@@ -15,20 +15,10 @@ $mysql->query("CREATE TABLE IF NOT EXISTS `products`(`id` INT NOT NULL AUTO_INCR
 <div id="header">
     <image id="logo" src="logo.jpg"></image>
     GameUp!
-    <button id="headbut"><img src="user.png" alt="аккаунт" id="icon"></button>
     <button id="headbut"><img src="basket.png" alt="корзина" id="icon"></button>
     <div id="slogan">Лучшее для лучших!</div>
 </div>
 <div id="content">
-    <div id="special">Специальные предложения!</div>
-    <table id="tr1">
-        <tr>
-            <td id="sales">Блок</td>
-            <td id="sales">Блок 2</td>
-            <td id="sales">Блок 3</td>
-            <td id="sales">Блок 4</td>
-        </tr>
-    </table>
     <table>
         <tr>
             <td>
@@ -42,7 +32,7 @@ $mysql->query("CREATE TABLE IF NOT EXISTS `products`(`id` INT NOT NULL AUTO_INCR
                 </form>
             </td>
             <td>
-                <form  action="../items/Mid_2.html">
+                <form  action="../items/Mid_2.php">
                     <button id="goodbut">
                         <img id="goodimg" src="Goodimage/HyperX%20Pulsefire%20Surge.jpg">
                     </button>

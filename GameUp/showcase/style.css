@@ -26,7 +26,7 @@ body {
     text-align: center;
     display: block;
     font-family: "Arial Black";
-    margin-top: 100px;
+    margin-top: 80px;
 }
 table{
     border-spacing: 27px 20px;
@@ -59,11 +59,7 @@ td{
     border-width: 2px;
     border-radius: 20px
 }
-#special{
-    color: red;
-    font-size: 35px;
-    margin-top: 10px;
-}
+
 #headbut{
     border-radius: 20%;
     float: right;
