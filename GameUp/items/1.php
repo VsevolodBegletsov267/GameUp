@@ -1,29 +1,14 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <title>GameUp!</title>
-    <link rel="stylesheet" type="text/css" href="../showcase/style.css">
-</head>
-<body>
-<div id="header">
-    <image id="logo" src="../showcase/logo.jpg"></image>
-    GameUp!
-    <button><img src="../showcase/user.png" alt="аккаунт" id="icon"></button>
-    <button><img src="../showcase/basket.png" alt="корзина" id="icon"></button>
-    <div id="slogan">Лучшее для лучших!</div>
-</div>
-<div id="content">
-  
 
-        <img src="../showcase/Goodimage/Razer Basilisk V3.jpg" id="imageproduct">
-
+<?php 
+ 
+ include 'header.php'; ?>
+ <img id="imageproduct" src="../showcase/Goodimage/Razer Basilisk V3.jpg">
+ 
         <div id="item">Razer Basilisk V3</div>
 
         <p id="price">Цена: 5.100 р.</p>
 
-        <p id="">КУПИТЬ</p>
+        <button class="buy-button">Купить</button>
 
         <div id="description">Описание</div>
 
@@ -42,7 +27,8 @@
 
 </p>
         
-    </div>
- </div>
-</body>
-</html>
+    
+  </div>
+</div>
+
+<?php include 'footer.php'; ?>

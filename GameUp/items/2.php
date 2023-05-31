@@ -1,24 +1,8 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <title>GameUp!</title>
-    <link rel="stylesheet" type="text/css" href="../showcase/style.css">
-</head>
-<body>
-<div id="header">
-    <image id="logo" src="../showcase/logo.jpg"></image>
-    GameUp!
-    <button><img src="../showcase/user.png" alt="аккаунт" id="icon"></button>
-    <button><img src="../showcase/basket.png" alt="корзина" id="icon"></button>
-    <div id="slogan">Лучшее для лучших!</div>
-</div>
-<div id="content">
-    
-
-
-  <img src="../showcase/Goodimage/HyperX Pulsefire Surge.jpg" alt="Картинка" id="imageproduct">
+ 
+<?php 
+ 
+ include 'header.php'; ?>
+ <img src="../showcase/Goodimage/HyperX Pulsefire Surge.jpg" alt="Картинка" id="imageproduct">
   
      <div id="item">HyperX Pulsefire Surge</div>
 
@@ -26,23 +10,8 @@
 
         <button class="buy-button">Купить</button>
 
-<style>
-.buy-button {
-  background-color: darkred;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 00px;
-  margin-right: 1100px;
-}
 
-.buy-button:hover {
-  background-color: #e60000;
-}
-</style>
+
 
 
         <div id="description">Описание</div>
@@ -63,10 +32,4 @@
 Модель поддерживает настройку эффектов подсветки, программных кнопок, разрешения, но самое главное в том, что все эти настройки можно сохранять в память при помощи программного обеспечения HyperX NGenuity. Круговая RGB-подсветка поддерживает динамические эффекты благодаря световому кольцу. HyperX Pulsefire Surge RGB HX-MC002B оборудована 6 кнопками, среди которых особое место отводится программируемым клавишам, позволяющим достичь высот в игровых сражениях.</p>
   </div>
 </div>
-
-
-        
-    </div>
- 
-</body>
-</html>
+<?php include 'footer.php'; ?>

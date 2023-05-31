@@ -89,26 +89,27 @@ a{
   align-items: center;
 }
 #imageproduct{
-width: 25%;
-margin-right: 1200px;
+width: 30%;
+margin-right: 1500px;
 }
 #item{
-margin-left: 200px;
+margin-left: -200px;
 scale: 2;
 margin-top: -550px;
 }
 #description{
-margin-left: 890px;
-scale: 1.5;
+margin-left: -500px;
+scale: 2;
+margin-top: 50px;
 }
 #text{
     text-align: left;
     margin-left: 800px;
 }
 #price{
-   margin-left: 10px;
-scale: 1.5;
-margin-top: 10px; 
+   margin-left: -350px;
+scale: 2;
+margin-top: 50px; 
 }
 .buy-button {
   background-color: darkred;
@@ -118,8 +119,9 @@ margin-top: 10px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 00px;
-  margin-right: 1100px;
+  margin-top: 10px;
+  margin-right: 500px;
+  scale: 1.5;
 }
 
 .buy-button:hover {
