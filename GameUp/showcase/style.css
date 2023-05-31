@@ -127,3 +127,28 @@ margin-top: 50px;
 .buy-button:hover {
   background-color: #e60000;
 }
+footer {
+  background-color: darkred;
+   position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social li a {
+  color: #333;
+}
+
+.social li a:hover {
+  color: #000;
+}
+
