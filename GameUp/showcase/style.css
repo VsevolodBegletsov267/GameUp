@@ -129,7 +129,8 @@ margin-top: 50px;
 }
 footer {
   background-color: darkred;
-   position: fixed;
+   /*position: fixed;*/
+    display: block;
   bottom: 0;
   width: 100%;
   padding: 20px;
