@@ -1,8 +1,8 @@
 </div>
 <footer>
   <div class="container">
-    <a> made by @KOPIBARIK & @axel_skl & @vsevolodbegletsov </a>
-    <a></a>
+    made by @KOPIBARIK & @axel_skl & @vsevolodbegletsov
+
   </div>
 </footer>
 

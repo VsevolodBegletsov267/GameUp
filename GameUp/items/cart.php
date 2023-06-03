@@ -19,15 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div id="header">
     <image id="logo" src="../showcase/logo.jpg"></image>
     GameUp!
-    <button><img src="../showcase/user.png" alt="аккаунт" id="icon"></button>
-    <button><img src="../showcase/basket.png" alt="корзина" id="icon"></button>
+    <button id="headbut"><img src="../showcase/basket.png" alt="корзина" id="icon"></button>
     <div id="slogan">Лучшее для лучших!</div>
 </div>
     <div id="cart">
   <h3>Корзина</h3>
   <ul id="cart-items"></ul>
-        <form method="post">
-            <button id="clear-cart">Очистить корзину</button>
+        <form  method="post">
+            <button class="basketbut" id="clear-cart">Очистить корзину</button>
         </form>
 </div>
 
@@ -46,7 +45,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </ul>
 </div>
 <form action="../showcase/index1.php">
-    <button>Продолжить покупки</button>
+    <button class="basketbut">Продолжить покупки</button>
 </form>
+<style>
+    body {
+        font-size: 25px;
+    }
+    #cart {
+        text-decoration: underline;
+        display: block;
+    }
+    #products{
+        text-decoration: underline;
+        display: block;
+    }
+    #headbut{
+        border-radius: 20%;
+        float: right;
+        margin-right: 25px;
+        margin-top: 30px;
+    }
+    .basketbut{
+    background-color: darkred;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 50px;
+    }
+</style>
 </body>
+
 </html>

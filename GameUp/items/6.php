@@ -4,9 +4,9 @@
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/HyperX Alloy Origins Core.jpg">
  
-        <div id="item"><?php $name = 'HyperX Alloy Origins Core'; ?></div>
+        <div id="item"><?php echo $name = 'HyperX Alloy Origins Core'; ?></div>
 
-        <p id="price">Цена: <?php $price = 11999; ?> р.</p>
+        <p id="price">Цена: <?php echo $price = 11999; ?> р.</p>
 
         <form method="post">
             <button class="buy-button">Купить</button>
