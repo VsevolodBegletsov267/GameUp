@@ -3,9 +3,9 @@
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Sony DualShock 4 v2.jpg">
  
-        <div id="item"><?php $name = 'Sony DualShock 4 v2'; ?></div>
+        <div id="item"><?php echo $name = 'Sony DualShock 4 v2'; ?></div>
 
-        <p id="price">Цена: <?php $price = 4990; ?> р.</p>
+        <p id="price">Цена: <?php echo $price = 4990; ?> р.</p>
 
         <button class="buy-button">Купить</button>
 
