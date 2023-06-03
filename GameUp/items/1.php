@@ -1,14 +1,16 @@
 
-<?php 
- 
- include 'header.php'; ?>
+<?php
+session_start();
+include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Razer Basilisk V3.jpg">
  
-        <div id="item">Razer Basilisk V3</div>
+        <div id="item"><?php echo $name = 'Razer Basilisk V3'; ?></div>
 
-        <p id="price">Цена: 5.100 р.</p>
+        <p id="price">Цена: <?php echo $price = 5100; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -31,4 +33,10 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['mouse']++;
+    $_SESSION['mouse'] = array($name, $price, $_SESSION['counter']['mouse']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

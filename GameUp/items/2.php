@@ -1,18 +1,16 @@
  
 <?php 
- 
+ session_start();
  include 'header.php'; ?>
  <img src="../showcase/Goodimage/HyperX Pulsefire Surge.jpg" alt="Картинка" id="imageproduct">
   
-     <div id="item">HyperX Pulsefire Surge</div>
+     <div id="item"><?php $name = 'HyperX Pulsefire Surge'; ?></div>
 
-        <p id="price">Цена:2.969 р.</p>
+        <p id="price">Цена: <?php $price = 2969 ?>р.</p>
 
-        <button class="buy-button">Купить</button>
-
-
-
-
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -32,4 +30,11 @@
 Модель поддерживает настройку эффектов подсветки, программных кнопок, разрешения, но самое главное в том, что все эти настройки можно сохранять в память при помощи программного обеспечения HyperX NGenuity. Круговая RGB-подсветка поддерживает динамические эффекты благодаря световому кольцу. HyperX Pulsefire Surge RGB HX-MC002B оборудована 6 кнопками, среди которых особое место отводится программируемым клавишам, позволяющим достичь высот в игровых сражениях.</p>
   </div>
 </div>
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['mouse1']++;
+    $_SESSION['mouse1'] = array($name, $price, $_SESSION['counter']['mouse1']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

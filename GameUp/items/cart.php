@@ -1,5 +1,11 @@
 <?php
 session_start();
+$fullprice = 0;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    session_destroy();
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
 ?>
 <!doctype html>
 <html lang="ru">
@@ -20,8 +26,7 @@ session_start();
     <div id="cart">
   <h3>Корзина</h3>
   <ul id="cart-items"></ul>
-  <p>Общая стоимость: <span id="total-price">0</span> руб.</p>
-        <form method="POST">
+        <form method="post">
             <button id="clear-cart">Очистить корзину</button>
         </form>
 </div>
@@ -30,28 +35,18 @@ session_start();
   <h3>Товары</h3>
   <ul>
     <?php
-    $mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
-    include "config.php";
-    $nameResult = $mysql->query("SELECT name FROM `products`");
-    while($good = $nameResult->fetch_assoc()) {
-        foreach ($good as $item) {
-            echo $item . '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
-        }
+    foreach (array_slice($_SESSION, 1) as $item) {
+            echo "$item[0] ----- $item[1] руб. ----- Кол-во: " . $item[2] . "<br><br>";
+            $goodprice = $item[2] * $item[1];
+            $fullprice = $fullprice + $goodprice;
     }
 
-    $priceResult = $mysql->query("SELECT price FROM `products`");
-    while($good = $priceResult->fetch_assoc()) {
-        foreach ($good as $item) {
-            echo $item . '<br><br>';
-        }
-    }
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $mysql->query("DELETE FROM `products`");
-    }
-    session_destroy();
-    $mysql->query("DELETE FROM `products`");
+    echo "Общая стоимость: $fullprice руб.";
     ?>
   </ul>
 </div>
+<form action="../showcase/index1.php">
+    <button>Продолжить покупки</button>
+</form>
 </body>
 </html>

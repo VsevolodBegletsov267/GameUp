@@ -1,14 +1,16 @@
 
-<?php 
- 
+<?php
+session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/MSI Oculux NXG253.jpg">
  
-        <div id="item">MSI Oculux NXG253</div>
+        <div id="item"><?php echo $name = 'MSI Oculux NXG253'; ?></div>
 
-        <p id="price">Цена: 68.999 р.</p>
+        <p id="price">Цена: <?php echo $price = 68999; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -28,4 +30,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['screen1']++;
+    $_SESSION['screen1'] = array($name, $price, $_SESSION['counter']['screen1']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

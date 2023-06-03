@@ -1,14 +1,16 @@
 
 <?php 
- 
+ session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/ASUS TUF Gaming K7.png">
  
-        <div id="item">ASUS TUF Gaming K7</div>
+        <div id="item"><?php echo $name = 'ASUS TUF Gaming K7'; ?></div>
 
-        <p id="price">Цена: 10.999  р.</p>
+        <p id="price">Цена: <?php echo $price = 10999; ?>р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -28,10 +30,14 @@
 
 
             </ul>
-
-        
-    
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['keyboard1']++;
+    $_SESSION['keyboard1'] = array($name, $price, $_SESSION['counter']['keyboard1']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

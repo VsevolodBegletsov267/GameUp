@@ -1,14 +1,16 @@
 
-<?php 
- 
+<?php
+session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Defender Pilot.jpg">
  
-        <div id="item">Defender Pilot</div>
+        <div id="item"><?php echo $name = 'Defender Pilot'; ?></div>
 
-        <p id="price">Цена: 10.960 р.</p>
+        <p id="price">Цена:<?php echo $price = 10960 ?>р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -28,4 +30,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['chair2']++;
+    $_SESSION['chair2'] = array($name, $price, $_SESSION['counter']['chair2']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

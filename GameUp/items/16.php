@@ -1,14 +1,16 @@
 
-<?php 
- 
+<?php
+session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/DXRacer OH_KS06_NO.jpg">
  
-        <div id="item">DXRacer OH_KS06_NO</div>
+        <div id="item"><?php echo $name = 'DXRacer OH_KS06_NO'; ?></div>
 
-        <p id="price">Цена: 31.192 р.</p>
+        <p id="price">Цена:<?php echo $price = 31192 ?>р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -28,4 +30,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>  
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['chair']++;
+    $_SESSION['chair'] = array($name, $price, $_SESSION['counter']['chair']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

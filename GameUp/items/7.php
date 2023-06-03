@@ -1,14 +1,16 @@
 
 <?php 
- 
+ session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/HyperX Cloud Alpha S.jpg">
  
-        <div id="item">HyperX Cloud Alpha S</div>
+        <div id="item"><?php echo $name = 'HyperX Cloud Alpha S'; ?></div>
 
-        <p id="price">Цена: 8.079 р.</p>
+        <p id="price">Цена: <?php echo $price = 8079; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -36,5 +38,11 @@
     
   </div>
 </div>
-
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['headphones']++;
+    $_SESSION['headphones'] = array($name, $price, $_SESSION['counter']['headphones']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

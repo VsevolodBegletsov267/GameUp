@@ -1,14 +1,16 @@
 
 <?php 
- 
+ session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/HyperX Alloy Origins Core.jpg">
  
-        <div id="item">HyperX Alloy Origins Core</div>
+        <div id="item"><?php $name = 'HyperX Alloy Origins Core'; ?></div>
 
-        <p id="price">Цена: 11.999  р.</p>
+        <p id="price">Цена: <?php $price = 11999; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -33,4 +35,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['keyboard2']++;
+    $_SESSION['keyboard2'] = array($name, $price, $_SESSION['counter']['keyboard2']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

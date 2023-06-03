@@ -1,14 +1,16 @@
 
-<?php 
- 
+<?php
+session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Samsung Odyssey G7.jpg">
  
-        <div id="item">Samsung Odyssey G7</div>
+        <div id="item"><?php echo $name = 'Odyssey G7'; ?></div>
 
-        <p id="price">Цена: 49.999 р.</p>
+<p id="price">Цена: <?php echo $price = 49999; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -43,4 +45,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['screen']++;
+    $_SESSION['screen'] = array($name, $price, $_SESSION['counter']['screen']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

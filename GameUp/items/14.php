@@ -1,14 +1,16 @@
 
-<?php 
- 
+<?php
+session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Sony Dual Sense.jpg">
  
-        <div id="item">Sony Dual Sense</div>
+        <div id="item"<?php echo $name = 'Sony Dual Sense'; ?></div>
 
-        <p id="price">Цена: 5.900 р.</p>
+        <p id="price">Цена: <?php echo $price = 5900; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -25,4 +27,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>  
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['gamepad1']++;
+    $_SESSION['gamepad1'] = array($name, $price, $_SESSION['counter']['gamepad1']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>

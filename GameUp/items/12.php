@@ -1,14 +1,16 @@
 
-<?php 
- 
+<?php
+session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Huawei MateView GT.jpg">
  
-        <div id="item">Huawei MateView GT</div>
+        <div id="item"><?php echo $name = 'MateView GT'; ?></div>
 
-        <p id="price">Цена: 29.990 р.</p>
+<p id="price">Цена: <?php echo $price = 29990; ?> р.</p>
 
-        <button class="buy-button">Купить</button>
+        <form method="post">
+            <button class="buy-button">Купить</button>
+        </form>
 
         <div id="description">Описание</div>
 
@@ -28,4 +30,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['screen2']++;
+    $_SESSION['screen2'] = array($name, $price, $_SESSION['counter']['screen2']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>
