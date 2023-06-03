@@ -1,7 +1,6 @@
 <?php
-//session_start();
-//$mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
-//$mysql->query("CREATE TABLE IF NOT EXISTS `products`(`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `price` INT(16) NOT NULL , PRIMARY KEY (`id`))")
+session_start();
+
 ?>
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
@@ -15,7 +14,9 @@
 <div id="header">
     <image id="logo" src="logo.jpg"></image>
     GameUp!
+    <form action="../items/cart.php">
     <button id="headbut"><img src="basket.png" alt="корзина" id="icon"></button>
+    </form>
     <div id="slogan">Лучшее для лучших!</div>
 </div>
 <div id="content">
