@@ -10,7 +10,7 @@ $userList = new UserList();
 $userView = new UserView($userList);
 $userController = new UserController($userList, $userView);
 
-$mysql = new mysqli('localhost', 'root', 'al1234al', 'gameup');
+$mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
 
 // Если форма отправлена, добавляем нового пользователя
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -8,7 +8,7 @@ $userList = new UserList();
 $userView = new UserView($userList);
 $userController = new UserController($userList, $userView);
 
-$mysql = new mysqli('localhost', 'root', 'al1234al', 'gameup');
+$mysql = new mysqli('localhost', 'root', '1029384756Seva', 'gameup');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
