@@ -1,12 +1,11 @@
-
 <?php 
- 
+ session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Microsoft Xbox Elite Wireless Controller Series 2.jpg">
  
-        <div id="item">Microsoft Xbox Elite Wireless Controller Series 2</div>
+        <div id="item"><?php echo $name = 'Microsoft Xbox Elite Wireless Controller Series 2'; ?></div>
 
-        <p id="price">Цена: 12.889 р.</p>
+        <p id="price">Цена:<?php echo $price = 12889; ?>р.</p>
 
         <button class="buy-button">Купить</button>
 
@@ -27,4 +26,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['gamepad']++;
+    $_SESSION['gamepad'] = array($name, $price, $_SESSION['counter']['gamepad']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>
