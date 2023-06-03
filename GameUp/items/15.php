@@ -1,12 +1,11 @@
-
 <?php 
- 
+ session_start();
  include 'header.php'; ?>
  <img id="imageproduct" src="../showcase/Goodimage/Sony DualShock 4 v2.jpg">
  
-        <div id="item">Sony DualShock 4 v2</div>
+        <div id="item"><?php $name = 'Sony DualShock 4 v2'; ?></div>
 
-        <p id="price">Цена: 4.990 р.</p>
+        <p id="price">Цена: <?php $price = 4990; ?> р.</p>
 
         <button class="buy-button">Купить</button>
 
@@ -26,4 +25,11 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php
+include 'footer.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['counter']['gamepad2']++;
+    $_SESSION['gamepad2'] = array($name, $price, $_SESSION['counter']['gamepad2']);
+    header('Location: http://localhost/GameUp/items/cart.php');
+}
+?>
