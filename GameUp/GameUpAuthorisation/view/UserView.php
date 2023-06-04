@@ -28,7 +28,7 @@ class UserView
                     height: 600px;
                     margin: auto;
                     margin-top: 120px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     border: 3px solid #fff;
                     border-radius: 10px;
                 }
@@ -46,7 +46,7 @@ class UserView
                     width: 300px;
                     height: 50px;
                     margin-top: 50px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     font-size: 20px;
                 }
             </style>
@@ -86,7 +86,7 @@ class UserView
                     height: 600px;
                     margin: auto;
                     margin-top: 120px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     border: 3px solid #fff;
                     border-radius: 10px;
                 }
@@ -104,7 +104,7 @@ class UserView
                     width: 300px;
                     height: 50px;
                     margin-top: 50px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     font-size: 20px;
                 }
             </style>
