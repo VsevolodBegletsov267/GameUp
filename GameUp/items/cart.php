@@ -74,8 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     font-size: 16px;
     margin-top: 10px;
     margin-right: 50px;
+        margin-bottom: 50px;
     }
 </style>
 </body>
 
 </html>
+<?php include 'footer.php'?>
