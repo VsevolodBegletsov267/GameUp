@@ -11,7 +11,6 @@ class UserView
 
     public function render(): void
     {
-        // Форма для добавления пользователей
         ?>
         <!DOCTYPE HTML>
         <html lang="en">
@@ -25,10 +24,10 @@ class UserView
                     text-align: center;
                     font-size: 50px;
                     width: 1000px;
-                    height: 600px;
+                    height: 670px;
                     margin: auto;
                     margin-top: 120px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     border: 3px solid #fff;
                     border-radius: 10px;
                 }
@@ -46,7 +45,7 @@ class UserView
                     width: 300px;
                     height: 50px;
                     margin-top: 50px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     font-size: 20px;
                 }
             </style>
@@ -69,7 +68,6 @@ class UserView
 
     public function error(): void
     {
-        // Форма для добавления пользователей
         ?>
         <!DOCTYPE HTML>
         <html lang="en">
@@ -83,10 +81,10 @@ class UserView
                     text-align: center;
                     font-size: 50px;
                     width: 1000px;
-                    height: 600px;
+                    height: 670px;
                     margin: auto;
                     margin-top: 120px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     border: 3px solid #fff;
                     border-radius: 10px;
                 }
@@ -104,7 +102,7 @@ class UserView
                     width: 300px;
                     height: 50px;
                     margin-top: 50px;
-                    font-family: "Anime Ace v3";
+                    font-family: "Arial Black";
                     font-size: 20px;
                 }
             </style>

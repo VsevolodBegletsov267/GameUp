@@ -11,7 +11,6 @@ class UserView
 
     public function render(): void
     {
-        // Форма для добавления пользователей
         ?>
         <!DOCTYPE HTML>
         <html lang="en">
@@ -86,7 +85,6 @@ class UserView
 
     public function errorName(): void
     {
-        // Форма для добавления пользователей
         ?>
         <!DOCTYPE HTML>
         <html lang="en">
@@ -162,7 +160,6 @@ class UserView
 
     public function errorEmail(): void
     {
-        // Форма для добавления пользователей
         ?>
         <!DOCTYPE HTML>
         <html lang="en">

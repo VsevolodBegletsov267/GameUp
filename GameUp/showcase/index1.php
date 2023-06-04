@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+if (!isset($_COOKIE['email'])) {
+    header("Location: http://localhost/GameUp/GameUpRegistration/index.php?");
+}
 ?>
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
@@ -14,9 +16,6 @@ session_start();
 <div id="header">
     <image id="logo" src="logo.jpg"></image>
     GameUp!
-    <form id="headbut" action="../GameUpRegistration/index.php">
-        <button id="headbut"><img src="user.png" alt="авторизация" id="icon"></button>
-    </form>
     <form id="headbut" action="../items/cart.php">
     <button id="headbut"><img src="basket.png" alt="корзина" id="icon"></button>
     </form>

@@ -1,8 +1,9 @@
 <?php
-
+session_start();
 require_once 'model/User.php';
 require_once 'model/UserList.php';
 require_once 'controller/UserController.php';
+require_once 'config.php';
 
 $userList = new UserList();
 $userView = new UserView($userList);
@@ -21,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
 
         if ($user['password'] == $password) {
+            setcookie("email", $email, time()+3600, "/");
             header("Location: http://localhost/GameUp/showcase/index1.php");
         } else {
             exit($userView->error());
