@@ -25,7 +25,7 @@ class UserView
                     text-align: center;
                     font-size: 50px;
                     width: 1000px;
-                    height: 600px;
+                    height: 670px;
                     margin: auto;
                     margin-top: 120px;
                     font-family: "Arial Black";
@@ -83,7 +83,7 @@ class UserView
                     text-align: center;
                     font-size: 50px;
                     width: 1000px;
-                    height: 600px;
+                    height: 670px;
                     margin: auto;
                     margin-top: 120px;
                     font-family: "Arial Black";
