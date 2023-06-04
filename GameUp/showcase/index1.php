@@ -9,12 +9,14 @@ session_start();
     <meta name="viewport">
     <title>GameUp!</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta http-equiv="refresh" content="0; url=http://localhost/GameUp/GameUpRegistration/">
 </head>
 <body>
 <div id="header">
     <image id="logo" src="logo.jpg"></image>
     GameUp!
+    <form id="headbut" action="../GameUpRegistration/index.php">
+        <button id="headbut"><img src="user.png" alt="авторизация" id="icon"></button>
+    </form>
     <form id="headbut" action="../items/cart.php">
     <button id="headbut"><img src="basket.png" alt="корзина" id="icon"></button>
     </form>
