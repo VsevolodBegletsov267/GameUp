@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user['password'] == $password) {
             header("Location: http://localhost/GameUp/showcase/index1.php");
         } else {
-            echo '<center><h1>Неверный пользователь или пароль!</h1></center>';
+            exit($userView->error());
         }
     }
 }

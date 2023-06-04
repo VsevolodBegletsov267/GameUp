@@ -25,14 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $emailUser = $emailResult->fetch_assoc();
         foreach ($nameUser as $item) {
             if ($name == $item) {
-                echo "Пользователь с таким именем уже существует";
-                exit();
+                exit($userView->errorName());
             }
         }
         foreach ($emailUser as $item) {
             if ($email == $item) {
-                echo "Пользователь с таким email'ом уже существует";
-                exit();
+                exit($userView->errorEmail());
             }
         }
         header("Location: http://localhost/GameUp/showcase/index1.php");

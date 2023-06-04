@@ -17,15 +17,15 @@ class UserView
         <html lang="en">
         <head>
             <meta charset="utf-8">
-            <title>Регистрация</title>
+            <title>Авторизация</title>
             <style>
                 #reg {
                     background: darkred;
                     color: #fff;
                     text-align: center;
                     font-size: 50px;
-                    width: max-content;
-                    height: max-content;
+                    width: 1000px;
+                    height: 600px;
                     margin: auto;
                     margin-top: 120px;
                     font-family: "Anime Ace v3";
@@ -55,6 +55,65 @@ class UserView
         <div id="reg">
             <center>
                 <form method="POST">
+                    Авторизация<br><br>
+                    Email:<br><input type="email" name="email"><br>
+                    Пароль:<br><input type="password" name="password"><br>
+                    <input type="submit" value="Войти" class="button1">
+                </form>
+            </center>
+        </div>
+        </body>
+        </html>
+        <?php
+    }
+
+    public function error(): void
+    {
+        // Форма для добавления пользователей
+        ?>
+        <!DOCTYPE HTML>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Авторизация: ошибка</title>
+            <style>
+                #reg {
+                    background: darkred;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 50px;
+                    width: 1000px;
+                    height: 600px;
+                    margin: auto;
+                    margin-top: 120px;
+                    font-family: "Anime Ace v3";
+                    border: 3px solid #fff;
+                    border-radius: 10px;
+                }
+
+                body {
+                    background: darkgrey;
+                    color: black;
+                }
+
+                .button1 {
+                    background-color: #800000;
+                    color: white;
+                    border-width: 2px;
+                    border-color: white;
+                    width: 300px;
+                    height: 50px;
+                    margin-top: 50px;
+                    font-family: "Anime Ace v3";
+                    font-size: 20px;
+                }
+            </style>
+        </head>
+        <body>
+        <div id="reg">
+            <center>
+                <form method="POST">
+                    Неверный email или пароль<br><br>
                     Авторизация<br><br>
                     Email:<br><input type="email" name="email"><br>
                     Пароль:<br><input type="password" name="password"><br>
