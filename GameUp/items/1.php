@@ -8,7 +8,7 @@ include 'header.php'; ?>
 
         <p id="price">Цена: <?php echo $price = 5100; ?> р.</p>
 
-        <form method="post">
+        <form id=buybutton method="post">
             <button class="buy-button">Купить</button>
         </form>
 

@@ -6,9 +6,9 @@
         <div id="item"><?php echo $name = 'Microsoft Xbox Elite Wireless Controller Series 2'; ?></div>
 
         <p id="price">Цена:<?php echo $price = 12889; ?>р.</p>
-
+        <form id=buybutton method="post">
         <button class="buy-button">Купить</button>
-
+        </form>
         <div id="description">Описание</div>
 
         <div id="text">

@@ -6,9 +6,9 @@
         <div id="item"><?php echo $name = 'Sony DualShock 4 v2'; ?></div>
 
         <p id="price">Цена: <?php echo $price = 4990; ?> р.</p>
-
+        <form id=buybutton method="post">
         <button class="buy-button">Купить</button>
-
+        </form>
         <div id="description">Описание</div>
 
         <div id="text">

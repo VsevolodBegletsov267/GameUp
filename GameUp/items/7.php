@@ -8,7 +8,7 @@
 
         <p id="price">Цена: <?php echo $price = 8079; ?> р.</p>
 
-        <form method="post">
+        <form id=buybutton method="post">
             <button class="buy-button">Купить</button>
         </form>
 

@@ -94,26 +94,31 @@ width: 30%;
 margin-right: 80%;
 }
 #item{
-margin-left: 0;
+display: block;
+
 scale: 2;
 margin-top: -27%;
 }
 #description{
-margin-left: -25%;
+    display: block;
+
 scale: 2;
 margin-top: 3%;
+padding-left: 5%;
 }
 #text{
     text-align: left;
-    margin-left: 800px;
+    display: block;
+    padding-left: 50%;
 }
 #price{
-   margin-left: -350px;
+ display: block;
+    padding-left: 5%;
 scale: 2;
 margin-top: 50px; 
 }
 .buy-button {
-  background-color: darkred;
+    background-color: darkred;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -121,8 +126,11 @@ margin-top: 50px;
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
-  margin-right: 500px;
   scale: 1.5;
+}
+#buybutton{
+    display: block;
+    padding-left: 5%;
 }
 
 .buy-button:hover {
