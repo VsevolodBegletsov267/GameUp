@@ -29,12 +29,11 @@
     
   </div>
 </div>
-
 <?php
 include 'footer.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    header('Location: http://localhost/GameUp/items/cart.php');
     $_SESSION['counter']['headphones1']++;
     $_SESSION['headphones1'] = array($name, $price, $_SESSION['counter']['headphones1']);
-    header('Location: http://localhost/GameUp/items/cart.php');
 }
 ?>
